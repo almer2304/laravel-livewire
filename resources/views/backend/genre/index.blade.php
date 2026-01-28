@@ -63,28 +63,7 @@
                             <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-list"></i>Genre list</h6>
                         </div>
                         <div class="card-body">
-                            <a href="" class="btn btn-primary mb-3 w-20%"><i class="fas fa-plus"></i>Create genre</a>
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Name</th>
-                                        <th>Slug</th>
-                                        <th width="15%">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>No</td>
-                                        <td>Name</td>
-                                        <td>Slug</td>
-                                        <td>
-                                            <a href="" class="btn btn-success"><i class="fas fa-edit"></i>Edit</a>
-                                            <a href="" class="btn btn-danger"><i class="fas fa-trash"></i>Delete</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            @livewire('backend.genre.index')
                         </div>
                     </div>
                     
