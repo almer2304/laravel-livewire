@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Str;
 class Genre extends Model
 {
     protected $fillable = ['name', 'slug'];
@@ -11,7 +11,7 @@ class Genre extends Model
     public static function booted()
     {
         static::creating(function ($genre) {
-            $genre->uuid = (string) \Illuminate\Support\Str::uuid();
+            $genre->uuid = (string) Str::uuid();
         });
     }
 }

@@ -4,6 +4,7 @@ namespace App\Livewire\Backend\Genre;
 
 use Livewire\Component;
 use App\Models\Genre;
+use Illuminate\Support\Str;
 class Index extends Component
 {
     public $name, $slug;
@@ -33,5 +34,10 @@ class Index extends Component
 
         $this->reset();
         $this->showForm = false;
+    }
+
+    public function updatedName($value)
+    {
+        $this->slug =   Str::slug($value);
     }
 }

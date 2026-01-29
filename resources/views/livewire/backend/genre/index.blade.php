@@ -3,7 +3,7 @@
         <form wire:submit="store">
             <div class="form-group">
                 <label for="">Name</label>
-                <input type="text" placeholder="Masukkan genre baru" wire:model="name" class="form-control @error('name') is-invalid @enderror">
+                <input type="text" placeholder="Masukkan genre baru" wire:model.lazy="name" class="form-control @error('name') is-invalid @enderror">
                 @error('name')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
